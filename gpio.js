@@ -6,29 +6,16 @@ class GPIO {
         console.log('GPIO helper created!')
         this.relais = new Gpio(23, 'out')
 
-        /** 3 inputs */
-        this.inputs = []
-        this.inputs.push(new Gpio(17, 'in'))
-        this.inputs.push(new Gpio(27, 'in'))
-        this.inputs.push(new Gpio(22, 'in'))
+        this.input = new Gpio(17,'in','both')
     }
 
     relaisOn() {
-        this.relais.writeSync(1)
-    }
-
-    relaisOff() {
         this.relais.writeSync(0)
     }
 
-
-    readInputs() {
-        const result = []
-        this.inputs.forEach((el, index) => {
-            result.push({ index, value: el.readSync() })
-        })
-        return result
+    relaisOff() {
+        this.relais.writeSync(1)
     }
 }
     
-exports.default = new GPIO()
+exports.default = new GPIO() 
