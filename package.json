@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Opdracht_2_Em1",
   "dependencies": {
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "knex": "^0.20.15",
     "mqtt": "^4.1.0",
     "mysql": "^2.18.1",
